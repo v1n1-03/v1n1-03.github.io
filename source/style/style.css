@@ -1,0 +1,168 @@
+body{
+    color: white;
+    background: linear-gradient(300deg,darkviolet,#150050,#3f0071,#610094,#000000);
+    background-size: 300% 300%;
+    animation: gradient-animation 35s ease infinite;
+}
+
+a, i{
+    color: inherit;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 200;
+}
+
+.topbar ul{
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.topbar{
+    display: flex;
+    justify-content: center;
+    gap: 35%;
+}
+
+.text{
+    margin-top: 14rem;
+    margin-left: 5rem;
+}
+
+h1{
+    font-size:3.5rem;
+    font-weight: 600;
+    width: 16.5%;
+}
+
+h2{
+    margin-top: 1.5rem;
+    font-size: 2.4rem;
+    font-weight: 450;
+}
+
+p{
+    font-size: 1.8rem;
+    font-weight: 200;
+    text-align: justify;
+}
+
+#description{
+    margin-top: 1.7rem;
+    width: 30%;
+}
+
+#btn{
+    height: 30%;
+    width: 60%;
+}
+
+.img{
+    width: 500px;
+    border-radius: 50%;
+    position: absolute;
+    left: 58%;
+    top: 19%;
+    animation: float 2s ease-in-out infinite;
+    -webkit-box-shadow: -5.5px 19.5px 32px -3.5px #000000;
+-moz-box-shadow: -5.5px 19.5px 32px -3.5px #000000;
+box-shadow: -5.5px 19.5px 32px -3.5px #000000;
+}
+
+@keyframes float{
+	0%,100%{
+		transform:translatey(0)
+	}
+	50%{
+		transform:translatey(-30px)
+	}
+}
+
+a:hover, i:hover{
+    opacity: 0.8;
+    transition: background 1s;
+    color: #9500da;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Space%20Grotesk:700|Space%20Grotesk:400');
+
+:root {
+/*  change this for scaling  */
+  --m: 3rem;
+  
+  --red: #FF6565;
+  --pink: #FF64F9;
+  --purple: #6B5FFF;
+  --blue: #4D8AFF;
+  --green: #5BFF89;
+  --yellow: #FFEE55;
+  --orange: #FF6D1B;
+  
+}
+body {
+  background-color: #141516;
+  height: 100vh;
+  margin: 0;
+}
+
+button{
+  margin-top: 2rem;
+  margin-left: 5rem;
+  border: calc(0.08 * var(--m)) solid transparent;
+  position: relative;
+  color: #F3F3F3;
+  font-family: 'Space Grotesk';
+  font-size: 1.8rem;
+  border-radius: calc(0.7 * var(--m));
+  padding: calc(0.5 * var(--m)) calc(1 * var(--m));
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  
+  background:linear-gradient(#121213, #121213), linear-gradient(#121213 50%, rgba(18, 18, 19, 0.6) 80%, rgba(18, 18, 19, 0)),  linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
+  background-origin: border-box;
+  background-clip: padding-box, border-box, border-box;
+  background-size: 200%;
+  animation: animate 2s infinite linear;
+}
+
+button::before {
+  content: '';
+  background: linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
+  height: 30%;
+  width: 60%;
+  position: absolute;
+  bottom: -20%;
+  z-index: -5;
+  background-size: 200%;
+  animation: animate 2s infinite linear;
+  filter: blur(calc(0.8 * var(--m)));
+}
+
+button:hover, button:hover::before {
+  animation: animate 0.5s infinite linear;
+}
+
+@keyframes animate {
+  0% {background-position: 0}
+  100% {background-position: 200%}
+}
+
+@media screen and (max-width: 1000px) {
+  :root {
+    --m: 2rem;
+  }
+}
+
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
