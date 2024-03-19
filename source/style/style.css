@@ -8,7 +8,6 @@ body{
 a, i{
     color: inherit;
     text-decoration: none;
-    font-size: 1.8rem;
     font-weight: 200;
 }
 
@@ -17,6 +16,7 @@ a, i{
     gap: 1.5rem;
     justify-content: center;
     margin-top: 1rem;
+    font-size: 1.8rem;
 }
 
 .topbar{
@@ -66,8 +66,8 @@ p{
     top: 19%;
     animation: float 2s ease-in-out infinite;
     -webkit-box-shadow: -5.5px 19.5px 32px -3.5px #000000;
--moz-box-shadow: -5.5px 19.5px 32px -3.5px #000000;
-box-shadow: -5.5px 19.5px 32px -3.5px #000000;
+    -moz-box-shadow: -5.5px 19.5px 32px -3.5px #000000;
+    box-shadow: -5.5px 19.5px 32px -3.5px #000000;
 }
 
 @keyframes float{
@@ -80,7 +80,6 @@ box-shadow: -5.5px 19.5px 32px -3.5px #000000;
 }
 
 a:hover, i:hover{
-    opacity: 0.8;
     transition: background 1s;
     color: #9500da;
 }
@@ -106,7 +105,7 @@ body {
   margin: 0;
 }
 
-button{
+#btn-contact{
   margin-top: 2rem;
   margin-left: 5rem;
   border: calc(0.08 * var(--m)) solid transparent;
@@ -125,9 +124,10 @@ button{
   background-clip: padding-box, border-box, border-box;
   background-size: 200%;
   animation: animate 2s infinite linear;
+  width: 9%;
 }
 
-button::before {
+#btn-contact::before {
   content: '';
   background: linear-gradient(90deg, var(--orange), var(--yellow), var(--green), var(--blue), var(--purple), var(--pink), var(--red));
   height: 30%;
@@ -140,7 +140,7 @@ button::before {
   filter: blur(calc(0.8 * var(--m)));
 }
 
-button:hover, button:hover::before {
+#btn-contact:hover, #btn-contact:hover::before {
   animation: animate 0.5s infinite linear;
 }
 
